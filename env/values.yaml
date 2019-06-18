@@ -15,7 +15,7 @@ expose:
   - --v
   - 4
   config:
-    domain: group1001.services
+    domain: group1001.cloud
     exposer: Ingress
     http: "false"
     tlsacme: "true"
@@ -23,6 +23,7 @@ jenkins:
   Servers:
     Global:
       EnvVars:
+        DOCKER_REGISTRY: 717219761087.dkr.ecr.us-east-1.amazonaws.com
         TILLER_NAMESPACE: kube-system
   enabled: false
 prow: {}
